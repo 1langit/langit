@@ -17,7 +17,7 @@ import Portofolio from '@/assets/Portofolio.png';
 
 export const data: Project[] = [
     {
-        id:1,
+        id: 1,
         title: "Smiley",
         description: "Dental health app",
         technology: [FaAndroid, TbBrandKotlin, IoLogoFirebase, SiGooglecloud, SiTensorflow],
@@ -25,15 +25,15 @@ export const data: Project[] = [
         link: "https://github.com/1langit/Smiley",
     },
     {
-        id:2,
+        id: 2,
         title: "Zenspire",
         description: "Mental health app",
-        technology: [FaAndroid, TbBrandKotlin, SiGooglecloud],
+        technology: [FaAndroid, TbBrandKotlin, SiGooglecloud, SiGooglegemini],
         image: Zenspire,
         link: "https://github.com/1langit/Zenspire",
     },
     {
-        id:3,
+        id: 3,
         title: "Aether",
         description: "Air polution monitoring app",
         technology: [FaAndroid, TbBrandKotlin, IoLogoFirebase, SiGooglegemini],
@@ -41,7 +41,7 @@ export const data: Project[] = [
         link: "https://github.com/1langit/Aether",
     },
     {
-        id:4,
+        id: 4,
         title: "TravelTix",
         description: "Train ticketing app",
         technology: [FaAndroid, TbBrandKotlin, IoLogoFirebase],
@@ -49,7 +49,7 @@ export const data: Project[] = [
         link: "https://github.com/1langit/TravelTix",
     },
     {
-        id:5,
+        id: 5,
         title: "Denteksi",
         description: "Dental screening examination web app",
         technology: [FaLaravel, FaBootstrap],
@@ -57,7 +57,15 @@ export const data: Project[] = [
         link: "denteksi.com",
     },
     {
-        id:6,
+        id: 6,
+        title: "Toko Buku",
+        description: "Bookstore web app",
+        technology: [FaLaravel, FaBootstrap],
+        image: TokoBuku,
+        link: "https://github.com/1langit/PPW2-14",
+    },
+    {
+        id: 7,
         title: "SparkNotes",
         description: "Note taking web app",
         technology: [FaHtml5, FaBootstrap, SiJavascript, PiFileSqlFill, BiLogoPhp],
@@ -65,16 +73,8 @@ export const data: Project[] = [
         link: "https://github.com/1langit/SparkNotes",
     },
     {
-        id:7,
-        title: "Toko Buku",
-        description: "Bookstore web app",
-        technology: [FaLaravel, FaBootstrap, SiTailwindcss],
-        image: TokoBuku,
-        link: "https://github.com/1langit",
-    },
-    {
-        id:8,
-        title: "Portofolio Web",
+        id: 8,
+        title: "Portofolio",
         description: "You are here!",
         technology: [SiNextdotjs, FaReact, SiTailwindcss],
         image: Portofolio,

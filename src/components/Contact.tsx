@@ -4,9 +4,9 @@ import { IoMdMail } from 'react-icons/io'
 
 export default function Contact() {
   return (
-    <footer className='w-full h-96 flex flex-col justify-center items-center p-4 my-20' id='contact'>
+    <div className='w-full h-96 flex flex-col justify-center items-center p-4 my-20' id='contact'>
       <div className='pb-14'>
-          <p className='text-4xl font-bold inline border-b-4'>Get in touch</p>
+          <p className='text-3xl sm:text-4xl font-bold inline border-b-4'>Get in touch</p>
       </div>
       <div className='md:flex items-center'>
         <a
@@ -37,6 +37,6 @@ export default function Contact() {
             <p className='ms-2'>1langit</p>
         </a>
       </div>
-    </footer>
+    </div>
   )
 }

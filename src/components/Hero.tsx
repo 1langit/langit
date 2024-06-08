@@ -1,5 +1,4 @@
 import React from 'react';
-// import { HiArrowNarrowRight } from 'react-icons/hi';
 
 export default function Hero() {
   return (
@@ -14,8 +13,8 @@ export default function Hero() {
           I&apos;m a Software Developer
         </p>
         <a
-          // href="/assets/CV-langitlintangradjendra.pdf"
-          // target="_blank"
+          href='/assets/CV-Langit-Lintang-Radjendra.pdf'
+          target='_blank'
         >
           <button className='border-2 border-black rounded-lg px-5 py-2 my-2 bg-black text-white transition-colors hover:bg-white hover:border-black hover:text-black'>
             View CV

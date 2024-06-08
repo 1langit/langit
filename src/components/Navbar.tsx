@@ -63,8 +63,8 @@ export default function Navbar() {
         <ul
           className={
             !nav
-              ? 'hidden'
-              : 'absolute top-0 left-0 w-full backdrop-blur flex flex-col justify-center items-center'
+              ? 'absolute -translate-y-40'
+              : 'absolute top-0 left-0 w-full backdrop-blur-xl flex flex-col justify-center items-center transition-all'
           }
         >
           <li className='hover:cursor-pointer hover:border-b-2 border-gray-500 mt-4'>
