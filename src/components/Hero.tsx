@@ -13,7 +13,7 @@ export default function Hero() {
           I&apos;m a Software Developer
         </p>
         <a
-          href='/assets/CV-Langit-Lintang-Radjendra.pdf'
+          href='CV-Langit-Lintang-Radjendra.pdf'
           target='_blank'
         >
           <button className='border-2 border-black rounded-lg px-5 py-2 my-2 bg-black text-white transition-colors hover:bg-white hover:border-black hover:text-black'>
