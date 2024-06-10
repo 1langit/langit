@@ -54,7 +54,7 @@ export const data: Project[] = [
         description: "Dental screening examination web app",
         technology: [FaLaravel, FaBootstrap],
         image: Denteksi,
-        link: "denteksi.com",
+        link: "https://denteksi.com",
     },
     {
         id: 6,
