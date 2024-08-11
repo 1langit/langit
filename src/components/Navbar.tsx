@@ -1,6 +1,5 @@
 "use client";
 
-import Image from 'next/image';
 import React, { useState } from 'react';
 import {
   FaBars,
@@ -10,10 +9,12 @@ import {
 } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { Link } from 'react-scroll';
+import Scrollspy from "react-scrollspy";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+  const sections = ['home', 'about', 'skills', 'projects', 'contact'];
 
   return (
     <nav className='flex justify-center'>
@@ -26,32 +27,34 @@ export default function Navbar() {
         </div>
 
         {/* menu */}
-        <ul className='hidden md:flex gap-6'>
-          <li className='hover:cursor-pointer hover:border-b-2 border-gray-500'>
-            <Link to='home' smooth={true} duration={500}>
-              Home
-            </Link>
-          </li>
-          <li className='hover:cursor-pointer hover:border-b-2 border-gray-500'>
-            <Link to='about' smooth={true} duration={500}>
-              About
-            </Link>
-          </li>
-          <li className='hover:cursor-pointer hover:border-b-2 border-gray-500'>
-            <Link to='skills' smooth={true} duration={500}>
-              Skills
-            </Link>
-          </li>
-          <li className='hover:cursor-pointer hover:border-b-2 border-gray-500'>
-            <Link to='projects' smooth={true} duration={500}>
-              Projects
-            </Link>
-          </li>
-          <li className='hover:cursor-pointer hover:border-b-2 border-gray-500'>
-            <Link to='contact' smooth={true} duration={500}>
-              Contact
-            </Link>
-          </li>
+        <ul>
+          <Scrollspy items={sections} currentClassName="font-bold" className='hidden md:flex gap-6'>
+            <li className='hover:cursor-pointer hover:border-b-2 border-gray-500'>
+              <Link to='home' smooth={true} duration={500} offset={-60}>
+                Home
+              </Link>
+            </li>
+            <li className='hover:cursor-pointer hover:border-b-2 border-gray-500'>
+              <Link to='about' smooth={true} duration={500} offset={-60}>
+                About
+              </Link>
+            </li>
+            <li className='hover:cursor-pointer hover:border-b-2 border-gray-500'>
+              <Link to='skills' smooth={true} duration={500} offset={-60}>
+                Skills
+              </Link>
+            </li>
+            <li className='hover:cursor-pointer hover:border-b-2 border-gray-500'>
+              <Link to='projects' smooth={true} duration={500} offset={-60}>
+                Projects
+              </Link>
+            </li>
+            <li className='hover:cursor-pointer hover:border-b-2 border-gray-500'>
+              <Link to='contact' smooth={true} duration={500} offset={-60}>
+                Contact
+              </Link>
+            </li>
+          </Scrollspy>
         </ul>
 
         {/* Hamburger */}
@@ -68,31 +71,31 @@ export default function Navbar() {
           }
         >
           <li className='hover:cursor-pointer hover:border-b-2 border-gray-500 mt-4'>
-            <Link onClick={handleClick} to='home' smooth={true} duration={500}>
+            <Link onClick={handleClick} to='home' smooth={true} duration={500} offset={-60}>
               Home
             </Link>
           </li>
           <li className='hover:cursor-pointer hover:border-b-2 border-gray-500 mt-4'>
             {' '}
-            <Link onClick={handleClick} to='about' smooth={true} duration={500}>
+            <Link onClick={handleClick} to='about' smooth={true} duration={500} offset={-60}>
               About
             </Link>
           </li>
           <li className='hover:cursor-pointer hover:border-b-2 border-gray-500 mt-4'>
             {' '}
-            <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
+            <Link onClick={handleClick} to='skills' smooth={true} duration={500} offset={-60}>
               Skills
             </Link>
           </li>
           <li className='hover:cursor-pointer hover:border-b-2 border-gray-500 mt-4'>
             {' '}
-            <Link onClick={handleClick} to='projects' smooth={true} duration={500}>
+            <Link onClick={handleClick} to='projects' smooth={true} duration={500} offset={-60}>
               Projects
             </Link>
           </li>
           <li className='hover:cursor-pointer hover:border-b-2 border-gray-500 mt-4'>
             {' '}
-            <Link onClick={handleClick} to='contact' smooth={true} duration={500}>
+            <Link onClick={handleClick} to='contact' smooth={true} duration={500} offset={-60}>
               Contact
             </Link>
           </li>

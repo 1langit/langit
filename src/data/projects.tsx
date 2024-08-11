@@ -1,5 +1,4 @@
 import { Project } from '@/type/project';
-import Placeholder from '@/assets/placeholder.jpg';
 import { SiGooglecloud, SiGooglegemini, SiJavascript, SiNextdotjs, SiTailwindcss, SiTensorflow } from 'react-icons/si';
 import { FaAndroid, FaBootstrap, FaHtml5, FaLaravel, FaReact } from 'react-icons/fa';
 import { IoLogoFirebase } from 'react-icons/io5';
@@ -58,7 +57,7 @@ export const data: Project[] = [
     },
     {
         id: 6,
-        title: "Toko Buku",
+        title: "Bookstore Catalog",
         description: "Bookstore web app",
         technology: [FaLaravel, FaBootstrap],
         image: TokoBuku,
