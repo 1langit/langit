@@ -3,7 +3,7 @@ import { data } from '@/data/skills';
 import Image from 'next/image';
 
 export default function Skills() {
-    const skills = data
+  const skills = data
   return (
     <div className='w-full' id='skills'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full' >
@@ -13,9 +13,9 @@ export default function Skills() {
           </div>
 
           <div className='w-full grid grid-cols-2 sm:grid-cols-5 gap-4 gap-y-2 py-8'>
-            {skills.map(skill => (
-                <div key={skill.id} className='flex flex-col justify-between items-center rounded-md hover:bg-gray-200 duration-200 py-4'>
-                    <Image className='w-20 zmx-auto' src={skill.image} alt={skill.name} width={200} height={200} objectFit='contain' />
+            { skills.map((skill, index) => (
+                <div key={index} className='flex flex-col justify-between items-center rounded-md hover:bg-gray-200 duration-200 py-4'>
+                    <Image className='w-20 zmx-auto' src={skill.image} alt={skill.name} width={200} height={200} objectFit='contain' loading='lazy' />
                     <p className='mt-2'>{skill.name}</p>
                 </div>
             ))}

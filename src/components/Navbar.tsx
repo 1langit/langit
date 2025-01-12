@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <nav className='flex justify-center'>
-      <div className='fixed w-full max-w-[1400px] flex justify-between items-center px-4 py-4 bg-white'>
+      <div className='fixed w-full max-w-[1400px] flex justify-between items-center z-10 px-4 py-4 bg-white'>
         <div>
           <Link to='home' smooth={true} duration={500} className='flex items-center hover:cursor-pointer'>
             <p className='bg-black text-white px-3 py-1 me-3 rounded'>L</p>
@@ -76,25 +76,21 @@ export default function Navbar() {
             </Link>
           </li>
           <li className='hover:cursor-pointer hover:border-b-2 border-gray-500 mt-4'>
-            {' '}
             <Link onClick={handleClick} to='about' smooth={true} duration={500} offset={-60}>
               About
             </Link>
           </li>
           <li className='hover:cursor-pointer hover:border-b-2 border-gray-500 mt-4'>
-            {' '}
             <Link onClick={handleClick} to='skills' smooth={true} duration={500} offset={-60}>
               Skills
             </Link>
           </li>
           <li className='hover:cursor-pointer hover:border-b-2 border-gray-500 mt-4'>
-            {' '}
             <Link onClick={handleClick} to='projects' smooth={true} duration={500} offset={-60}>
               Projects
             </Link>
           </li>
           <li className='hover:cursor-pointer hover:border-b-2 border-gray-500 mt-4'>
-            {' '}
             <Link onClick={handleClick} to='contact' smooth={true} duration={500} offset={-60}>
               Contact
             </Link>
@@ -103,37 +99,39 @@ export default function Navbar() {
 
         {/* Social icons */}
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
-          <ul>
-            <li className='w-[160px] h-[60px] px-4 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-              <a
-                className='flex justify-between items-center w-full text-gray-200 ps-2'
-                href='https://linkedin.com/in/langit-lintang-r'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Linkedin <FaLinkedin size={30} />
-              </a>
-            </li>
-            <li className='w-[160px] h-[60px] px-4 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-              <a
-                className='flex justify-between items-center w-full text-gray-200 ps-2'
-                href='https://github.com/1langit'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Github <FaGithub size={30} />
-              </a>
-            </li>
-            <li className='w-[160px] h-[60px] px-4 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-              <a
-                className='flex justify-between items-center w-full text-gray-200 ps-2'
-                href='mailto:langitlintangradjendra@gmail.com'
-                target='_top'
-              >
-                Email <HiOutlineMail size={30} />
-              </a>
-            </li>
-          </ul>
+          <Scrollspy items={["contact"]} currentClassName='-translate-x-20 transition-transform duration-300'>
+            <ul className='transition-transform duration-200'>
+              <li className='w-[160px] h-[60px] px-4 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-200 bg-blue-600'>
+                <a
+                  className='flex justify-between items-center w-full text-gray-200 ps-2'
+                  href='https://linkedin.com/in/langit-lintang-r'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Linkedin <FaLinkedin size={30} />
+                </a>
+              </li>
+              <li className='w-[160px] h-[60px] px-4 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-200 bg-[#333333]'>
+                <a
+                  className='flex justify-between items-center w-full text-gray-200 ps-2'
+                  href='https://github.com/1langit'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Github <FaGithub size={30} />
+                </a>
+              </li>
+              <li className='w-[160px] h-[60px] px-4 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-200 bg-[#6fc2b0]'>
+                <a
+                  className='flex justify-between items-center w-full text-gray-200 ps-2'
+                  href='mailto:langitlintangradjendra@gmail.com'
+                  target='_top'
+                >
+                  Email <HiOutlineMail size={30} />
+                </a>
+              </li>
+            </ul>
+          </Scrollspy>
         </div>
       </div>
     </nav>
